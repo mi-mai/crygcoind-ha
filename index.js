@@ -310,7 +310,7 @@ TurtleCoind.prototype._checkRpc = function () {
       this.api.getInfo(),
       this.api.getHeight()
     ]).then((results) => {
-      if (results[0].height === results[1].height && results[0].status === results[1].status && results[1].status === results[2].status) {
+      if (results[0].height === results[1].height && results[0].status === results[1].status) {
         return resolve(results)
       } else {
         return reject(new Error('Daemon is returning inconsistent results'))
