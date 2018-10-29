@@ -308,8 +308,7 @@ TurtleCoind.prototype._checkRpc = function () {
   return new Promise((resolve, reject) => {
     Promise.all([
       this.api.getInfo(),
-      this.api.getHeight(),
-      this.api.getTransactions()
+      this.api.getHeight()
     ]).then((results) => {
       if (results[0].height === results[1].height && results[0].status === results[1].status && results[1].status === results[2].status) {
         return resolve(results)
