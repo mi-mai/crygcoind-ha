@@ -25,7 +25,7 @@ daemon.on('started', () => {
 })
 
 daemon.on('syncing', (info) => {
-  log(util.format('TurtleCoind has syncronized %s out of %s blocks [%s%]', info.height, info.network_height, info.percent))
+  log(util.format('TurtleCoind has synchronized %s out of %s blocks [%s%]', info.height, info.network_height, info.percent))
 })
 
 daemon.on('synced', () => {
